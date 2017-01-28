@@ -1,4 +1,5 @@
-button:focus {outline:0;}
+button:focus {outline:0 !important;}
+*:focus {outline:none !important}
 body {
 background-image: url('hw.jpeg');
     background-repeat: no-repeat;
