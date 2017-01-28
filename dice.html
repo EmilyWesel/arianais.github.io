@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="dist/dice3d.css">
+</head>
+<body>
+
+
+</div>
+  <div class="wrapper">
+
+    <audio id="dice3d-sound" src="dist/nc93322.mp3"></audio>
+    <input id="number" type="number" value=1 hidden="true">
+
+    <button  id="button-roll" class="button"/>
+    <script class="button" src="bower_components/jquery/dist/jquery.js"></script>
+
+    <script class="button"src="dist/dice3d.js"></script>
+
+    <script class="button">
+var button = document.getElementById('button-roll');
+var input = document.getElementById('button-roll');
+
+button.addEventListener('click', function(e) {
+  button.style.visibility = 'hidden';
+
+    e.preventDefault();
+    var n = +document.getElementById('number').value;
+    var log = [];
+    for (var i = 0; i < n; ++i) {
+        var r = Math.floor(Math.random() * 6) + 1;
+        log.push(r);
+        dice3d(6, r); // Animate 6 faces dice
+    }
+    setTimeout(function(){
+    //do what you need here
+    button.style.visibility = 'visible';
+
+}, 3000);
+
+
+    console.log(log);
+});
+
+    </script>
+</div>
+</body>
+</html>
